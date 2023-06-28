@@ -4,9 +4,12 @@ const pieces = await reponse.json( );
 
 //Creation des elements
 
-for (let i = 0; i< pieces.length; i++){
-const article = pieces[i];
 
+const article = pieces[0];
+
+const sectionFiches = document.querySelector(".fiches");
+
+const pieceElement = document.createElement("article");
 const imageElement = document.createElement("img");
 imageElement.src = article.image;
 
@@ -29,11 +32,14 @@ disponibiliteElement.innerText = `Disponibilité : (${descriptionElement==true ?
 descriptionElement.innerText = article.description ?? "(aucune description)";
 categorieElement.innerText = article.categorie ?? "(aucune catégorie)";
 //Attachement au parent
-const sectionFiches = document.querySelector(".fiches");
+
+
+sectionFiches.appendChild(pieceElement);
 sectionFiches.appendChild(imageElement);
 sectionFiches.appendChild(nomElement);
 sectionFiches.appendChild(prixElement);
 sectionFiches.appendChild(categorieElement);
 sectionFiches.appendChild(descriptionElement);
 sectionFiches.appendChild(disponibiliteElement);
-}
+
+
