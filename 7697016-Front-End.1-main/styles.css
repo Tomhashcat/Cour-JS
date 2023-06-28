@@ -50,6 +50,8 @@ main {
 	gap: 4px;
 }
 .fiches article {
+	display: flex;
+	flex-wrap: wrap;
 	border: 1px solid black;
 	padding: 4px;
 }
