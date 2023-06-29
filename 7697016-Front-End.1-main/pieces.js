@@ -83,7 +83,7 @@ boutonDescription.addEventListener('click', function () {
 
 
 
-
+//BOUTON FILTRE NOMS ABORDABLES
 const noms = pieces.map(piece=>piece.nom);
 
 for (let i =pieces.length -1; i >=0; i--) {
@@ -93,3 +93,20 @@ for (let i =pieces.length -1; i >=0; i--) {
    
 }
  console.log(noms);
+
+ //CREATION DE LA LISTE 
+
+ const abordablesElements =document.createElement('ul');
+ 
+ //AJOUT DE CHAQUE NOMS DANS LISTE
+
+ for (let i = 0; i < noms.length; i++) {
+   const nomElement=document.createElement('li');
+   nomElement.innerText= noms[i];
+   abordablesElements.appendChild(nomElement);
+};
+
+//Ajout de l'en-tete puis de la liste au bloc resultats filtres
+
+document.querySelector('.abordables').appendChild(abordablesElements);
+

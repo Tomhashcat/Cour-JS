@@ -68,3 +68,8 @@ main {
 .fiches article h2 {
 	text-align: center;
 }
+.abordables{
+	width: 20%;
+	
+	border: 1px solid black;
+}
