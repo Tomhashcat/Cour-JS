@@ -84,3 +84,12 @@ boutonDescription.addEventListener('click', function () {
 
 
 
+const noms = pieces.map(piece=>piece.nom);
+
+for (let i =pieces.length -1; i >=0; i--) {
+    if (pieces[i].prix>35){
+        noms.splice(i,1)
+    }
+   
+}
+ console.log(noms);
