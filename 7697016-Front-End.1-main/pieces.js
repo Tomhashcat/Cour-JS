@@ -12,6 +12,9 @@ function genererPieces(pieces){
         const sectionFiches = document.querySelector(".fiches");
         // Création d’une balise dédiée à une pièce automobile
         const pieceElement = document.createElement("article");
+
+        const avisElement = document.createElement('p');
+
         // Création des balises 
         const imageElement = document.createElement("img");
         imageElement.src = article.image;
@@ -146,4 +149,6 @@ inputPrixMax.addEventListener('input', function(){
     document.querySelector(".fiches").innerHTML = "";
     genererPieces(piecesFiltrees);  
 });
+
+
 
